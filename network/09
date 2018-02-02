@@ -1,0 +1,46 @@
+The IP address of Non-authoritative answer is mostly similar but the IP address of the DNS server is different as we are resolving the name using a different DNS server(8.8.8.8).
+
+The purpose of this question is to detect if we are getting a reply from a local server.
+Hence ideally, for 42 US, it should ask to compare outputs for 42.us.org
+
+
+For 42.fr, outputs are similar for non-authoritative answer, but the DNS servers' IP addresses are different.
+➜  ~ nslookup 42.fr
+Server:   10.51.1.253
+Address:  10.51.1.253#53
+
+Non-authoritative answer:
+Name:     42.fr
+Address: 163.172.250.12
+Name:  42.fr
+Address: 163.172.250.11
+
+Google DNS server
+➜  ~ nslookup 42.fr 8.8.8.8
+Server:      8.8.8.8
+Address:   8.8.8.8#53
+
+Non-authoritative answer:
+Name:     42.fr
+Address: 163.172.250.11
+Name:  42.fr
+Address: 163.172.250.12
+
+
+For 42.us.org, the local server responds to the DNS request.
+With Google server the public IP is used for the query.
+
+➜  ~ nslookup 42.us.org
+Server:   10.51.1.253
+Address:  10.51.1.253#53
+
+Name:   42.us.org
+Address: 10.53.1.9
+
+➜  ~ nslookup 42.us.org 8.8.8.8
+Server:       8.8.8.8
+Address:    8.8.8.8#53
+
+Non-authoritative answer:
+Name:     42.us.org
+Address: 64.62.224.24

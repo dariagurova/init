@@ -1,0 +1,1 @@
+ifconfig | grep mtu | awk -F: '{print $1;}'
