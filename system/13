@@ -1,0 +1,4 @@
+ps aux
+#list at that moment
+top
+#intaractive

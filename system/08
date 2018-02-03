@@ -1,0 +1,4 @@
+#cd ~/.ssh
+#touch authorized_keys
+#chmod 600 authorized_keys
+~/.ssh/authorized_keys

@@ -1,0 +1,2 @@
+ps -aux | grep sshd |grep -v grep | awk '{print $2;}'
+service ssh status | grep -i "main pid" | awk '{print $3;}'
