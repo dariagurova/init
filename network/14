@@ -1,1 +1,2 @@
-nslookup 10.10.90.50 | grep name | awk -F= '{print $2;}' | awk '{print $1;}'
+#nslookup 10.51.1.81 | grep name | awk -F= '{print $2;}' | awk '{print $1;}'
+Command output is: dpm-master.42.us.org.

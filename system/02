@@ -1,2 +1,2 @@
-sudo hostname new_name
-
+#su (to switch to the root)
+hostname new_name
