@@ -1,2 +1,2 @@
 # init
-My first system administration and networking project. 
+This priject helped me to get familiar with system administration and networking. 
